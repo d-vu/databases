@@ -8,7 +8,10 @@ var parser = require('body-parser');
 // Router
 var router = require('./routes.js');
 
-var app = express();
+var app = express();    // to support JSON-encoded bodies
+// app.use(parser.urlencoded({     // to support URL-encoded bodies
+//   extended: true
+// })); 
 module.exports.app = app;
 
 // Set what we are listening on.
